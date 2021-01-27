@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a href="" class="navbar-brand">TODO APP</a>
+</nav>
+<div class="container mt-4">
+  <h3>Adicionar Tarefas</h3>
+  <hr />
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-md-10">
+        <input type="text" class="form-control" placeholder="Adicionar tarefa" formControlName="description" />
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.get('description').valid" (click)="submit()">
+          ADD
+        </button>
+      </div>
+    </div>
+  </form>
+  <hr />
+  <h3>Tarefas</h3>
+
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li *ngFor="let t of todos" class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="{{t.done?'done':''}}">
+            {{ t.description }} {{t.doneDate}}
+          </span>
+          <div class="btn-group">
+            <button class="btn btn-success" [disabled]="t.done" (click)="concluido(t)">Done</button>
+            <button class="btn btn-danger" (click)="delete(t)">Delete</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
