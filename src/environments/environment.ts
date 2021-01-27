@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://localhost:8080/api/todos'
+  apiURL: 'https://fernandoschimidt-todo-api.herokuapp.com/api/todos'
 };
 
 /*
