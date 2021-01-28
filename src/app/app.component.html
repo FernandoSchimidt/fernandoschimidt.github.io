@@ -1,12 +1,12 @@
 <nav class="navbar navbar-dark bg-dark">
-  <a href="" class="navbar-brand">TODO APP</a>
+  <a href="" class="navbar-brand">Lista De Tarefas</a>
 </nav>
 <div class="container mt-4">
   <h3>Adicionar Tarefas</h3>
   <hr />
   <form [formGroup]="form">
-    <div class="row">
-      <div class="col-md-10">
+    <div class="row ">
+      <div class="col-md-10 mb-2" >
         <input type="text" class="form-control" placeholder="Adicionar tarefa" formControlName="description" />
       </div>
       <div class="col-md-2">
@@ -20,7 +20,7 @@
   <h3>Tarefas</h3>
 
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mb-4">
       <ul class="list-group">
         <li *ngFor="let t of todos" class="list-group-item d-flex justify-content-between align-items-center">
           <span class="{{t.done?'done':''}}">
@@ -34,4 +34,37 @@
       </ul>
     </div>
   </div>
+  <footer>
+    <div id="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="main-title">Contato</h3>
+                </div>
+                <div class="col-md-4 contact-box">
+                    <i class="fas fa-phone"></i>
+                    <p><span class="contact-tile">Ligue para:</span> (19)99594-6085</p>
+                </div>
+                <div class="col-md-4 contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <p><span class="contact-tile">Envie um email:</span> fernandoschimidt@outlook.com</p>
+                </div>
+                <div class="col-md-4 contact-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rua Lorem Ipsum - 1314</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copy-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Desenvolvido por <a href="https://github.com/FernandoSchimidt" target="_blank">Fernando Schimidt</a>
+                        &copy; 2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </div>

@@ -1,3 +1,39 @@
 .done{
     text-decoration: line-through;
 }
+hr{
+    background-color: #3EC1D5;
+}
+#contact-area {
+    text-align: center;
+}
+
+.contact-box {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #3EC1D5;
+}
+
+.contact-box i {
+    color: #444;
+    border: solid 1px #444;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 16px;
+}
+#copy-area{
+    text-align: center;
+}
+
+@media(max-width:767px){
+    .tarefa-input{
+        margin-bottom: 10px;
+    }
+}
